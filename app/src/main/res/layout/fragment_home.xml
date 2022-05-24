@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/atool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/app_name"
+        android:background="@color/primary_color"
+        app:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/linear_layout"
+            android:orientation="vertical">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:layout_width="match_parent"
+                android:id="@+id/slider"
+                app:auto_cycle="true"
+                app:placeholder="@drawable/background_grey"
+                app:error_image="@drawable/background_grey"
+                app:delay="0"
+                app:period="1000"
+
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                app:corner_radius="10"
+                android:layout_height="180dp">
+            </com.denzcoskun.imageslider.ImageSlider>
+
+
+            <TextView
+                android:id="@+id/txtBakeItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="20dp"
+                android:text="Popular Services"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/txtBakeItems"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:id="@+id/rcvCategory"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/txtBestSeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcvCategory"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="15dp"
+                android:text="Special Services"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/txtBestSeller"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:id="@+id/rcvSeller"/>
+
+            <TextView
+                android:id="@+id/tvrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended Saloon"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/rcvSeller"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/rvc3" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

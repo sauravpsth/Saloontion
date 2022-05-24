@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/atool7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Select date and time and click proceed to book for the appointment."
+        app:layout_constraintTop_toBottomOf="@+id/atool7" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rllayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvA">
+
+        <TextView
+            android:id="@+id/selectdatetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Select Date"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:text="Year:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toEndOf="@id/txtVw"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+
+        <TextView
+            android:id="@+id/txtVw2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Months:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/spinner1"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toEndOf="@id/txtVw2"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+
+        <TextView
+            android:id="@+id/txtVw3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Day:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/spinner2"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toEndOf="@id/txtVw3"
+            app:layout_constraintTop_toBottomOf="@id/selectdatetitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gdlayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rllayout">
+
+        <TextView
+            android:id="@+id/tvtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="8:00 AM"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtime"/>
+
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/circular_button"
+            android:text="9:00 AM"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/eight"
+            app:layout_constraintTop_toBottomOf="@id/tvtime"/>
+
+        <Button
+            android:id="@+id/ten"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="10:00 AM"
+            android:backgroundTint="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/nine"
+            app:layout_constraintTop_toBottomOf="@id/tvtime"/>
+
+        <Button
+            android:id="@+id/eleven"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="11:00 AM"
+            android:textAlignment="center"
+            android:backgroundTint="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/ten"
+            app:layout_constraintTop_toBottomOf="@id/tvtime"/>
+
+
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="12:00 PM"
+            android:backgroundTint="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eight"/>
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="1:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/one"
+            app:layout_constraintTop_toBottomOf="@id/nine"/>
+
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="2:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/two"
+            app:layout_constraintTop_toBottomOf="@id/ten"/>
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="3:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/three"
+            app:layout_constraintTop_toBottomOf="@id/eleven"/>
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="7:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/twelve"
+            app:layout_constraintTop_toBottomOf="@id/four"/>
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="4:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/one"/>
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="5:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/six"
+            app:layout_constraintTop_toBottomOf="@id/two"/>
+
+        <Button
+            android:id="@+id/twelve"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/circular_button"
+            android:text="6:00 PM"
+            android:textSize="15dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/seven"
+            app:layout_constraintTop_toBottomOf="@id/two"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_marginHorizontal="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/primary_color"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="70sp"
+        android:textColor="@color/white"
+        android:id="@+id/btproceed"
+        app:layout_constraintTop_toBottomOf="@id/gdlayout"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Profile"
+        app:titleTextColor="@color/white"
+        android:background="@color/primary_color"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relat"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/primary_color">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/primary_color"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tve"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/imageview1"
+            android:text="Email Address"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageview1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relat"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tvapp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Appoinment"
+            android:textSize="18dp"
+            android:padding="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/tvab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textSize="18dp"
+            android:background="@drawable/ripple_effect"
+            android:layout_below="@id/tvapp1"
+            android:padding="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="18dp"
+            android:layout_below="@id/tvab"
+            android:padding="@dimen/margin"
+            android:background="@drawable/ripple_effect"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

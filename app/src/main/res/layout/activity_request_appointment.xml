@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".RequestAppointment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/atool4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Request an Appointment"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/appoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:text="Please Confirm Your Appointment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atool4" />
+
+
+
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_marginTop="30dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/rounded_button"
+        android:hint="January 12, 2021 at 8:00 AM"
+        android:textSize="14sp"
+        android:inputType="datetime"
+        android:alpha="0.63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appoint" />
+
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_marginTop="24dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/rounded_button"
+        android:hint="Name"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:alpha="0.63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDate" />
+
+
+    <EditText
+        android:id="@+id/contact"
+        android:layout_width="0dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/rounded_button"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_marginTop="24dp"
+        android:hint="Contact Number"
+        android:inputType="phone"
+        android:textSize="14sp"
+        android:alpha="0.63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="24dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp"
+        android:alpha="0.63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/contact" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="Confirm Appointment"
+        android:textAllCaps="false"
+        android:textColor="@color/button_text"
+        android:backgroundTint="@color/theme_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

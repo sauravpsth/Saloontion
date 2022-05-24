@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ocem.Saloontion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Saloontion"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MyAppointments"></activity>
+        <activity android:name=".Verify" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".ForgetPassword" />
+        <activity
+            android:name=".Booking"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/BookingAppTheme"></activity>
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".BroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".AvailableSaloon"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SaloonService"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NotificationDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUs"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RequestAppointment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

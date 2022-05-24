@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/wtool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Saloons"
+        android:background="@color/primary_color"
+        app:titleTextColor="@color/white"/>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:layout_below="@+id/wtool"
+        android:layout_width="match_parent"
+        android:id="@+id/imgslider"
+        app:auto_cycle="true"
+        app:placeholder="@drawable/background_grey"
+        app:error_image="@drawable/background_grey"
+        app:delay="0"
+        app:period="1000"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="15dp"
+        app:corner_radius="10"
+        android:layout_height="180dp"/>
+
+
+    <TextView
+        android:id="@+id/tva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Saloon"
+        android:layout_below="@id/imgslider"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_marginStart="@dimen/margin"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyle6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tva"
+        android:layout_marginEnd="20dp"/>
+
+</RelativeLayout>
